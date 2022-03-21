@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+body {
+  background: darkred;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  background: lightslategray;
+  /*   width: var(--card-width);
+  height: var(--card-height); */
+  padding: 30px;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+  justify-content: center;
+  /*   align-items: center;
+  text-align: center; */
+  /*   display: flex;
+  font-size: 1.5em; */
+  color: rgb(88 199 250);
+  /*   font-family: cursive; */
+}
+
+.card::before {
+  content: "";
+  width: 102%;
+  height: 102%;
+  border-radius: 10px;
+  background-image: linear-gradient(var(--rotate), black, red 60%, white);
+  position: absolute;
+  margin-right: 10px;
+  z-index: -1;
+  top: -1%;
+  left: -1%;
+  animation: spin 2.5s linear infinite;
+}
+.titulo h1 {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  width: 499px;
+  height: 42px;
+  left: 250px;
+  top: 25px;
+}
+.titulo h2 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  width: 70%;
+  height: 42px;
+  left: 250px;
+  top: 100px;
+}
+.perfil {
+  display: flex;
+  align-items: center;
+}
+.perfil-foto {
+  border-radius: 460px;
+}
+.tema button {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 756px;
+  top: 10px;
+  background: #ff5252;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.projetos {
+  background: OldLace;
+  border-radius: 5px;
+  margin: 40px;
+  box-shadow: 6px 6px 6px #0e1d2f;
+  padding: 32px;
+  color: black;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.titulo-projetos {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 10px;
+}
+
+.lista-projetos {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+p > a:hover {
+  color: #d9d9d9;
+  text-decoration: underline;
+}
+
+h4 {
+  margin: 1% 0 1% 0;
+}
+._12 {
+  font-size: 1.2em;
+}
+._14 {
+  font-size: 1.4em;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+.footer-social-icons {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+.social-icon {
+  color: white;
+}
+ul.social-icons {
+  margin-top: 10px;
+}
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+.social-icons a {
+  color: white;
+  text-decoration: none;
+}
+.fa-facebook {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-facebook:hover {
+  background-color: #3d5b99;
+}
+.fa-twitter {
+  padding: 10px 12px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-twitter:hover {
+  background-color: #00aced;
+}
+.fa-rss {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-rss:hover {
+  background-color: #eb8231;
+}
+.fa-youtube {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-youtube:hover {
+  background-color: #e64a41;
+}
+.fa-linkedin {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-linkedin:hover {
+  background-color: #0073a4;
+}
+.fa-github {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+.fa-github:hover {
+  background-color: #5a32a3;
+}
+
+.dark {
+  background: #455a64;
+}
+
+.dark .card {
+  background: #ff5252;
+  color: rgb(88 199 250);
+}
+
+.dark .card::before {
+  background-image: linear-gradient(
+    var(--rotate),
+    #cfd8dc,
+    #ff5252 60%,
+    #bdbdbd
+  );
+}
+
+.dark .titulo h1 {
+  color: #212121;
+}
+.dark .titulo h2 {
+  color: #212121;
+}
+
+.dark .tema button {
+  background: lightslategray;
+}
+
+.dark .projetos {
+  background: #cfd8dc;
+  box-shadow: 6px 6px 6px #bdbdbd;
+}
